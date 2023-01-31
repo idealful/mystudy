@@ -1,4 +1,4 @@
-const { firefox, devices } = require('playwright');
+const { firefox } = require('playwright');
 const fs = require('fs');
 
 // TODO: 전역 변수. 웹브라우저 정보, 디버깅 여부, 타이틀을 설정.
@@ -10,7 +10,7 @@ const _GLOBAL = {
 
 /**
  * 브라우저 생성
- * @returns browser
+ * @returns {BrowserType} browser
  */
 const getBrowser = () => {
   return firefox.launch({
@@ -20,7 +20,8 @@ const getBrowser = () => {
 
 /**
  * 페이지 생성
- * @returns page
+ * @param {BrowserType} browser
+ * @returns {Page} page
  */
 const getPage = (browser) => {
   const { USER_AGENT: userAgent } = _GLOBAL;
@@ -29,7 +30,9 @@ const getPage = (browser) => {
 
 /**
  * 스크래핑
- * @returns result
+ * @param {Page} page
+ * @param {string} url
+ * @returns {Array} result
  */
 const scrap = async (page, url) => {
   await page.goto(url);
@@ -56,6 +59,7 @@ const scrap = async (page, url) => {
 
 /**
  * 콘솔 출력(디버깅 모드일 경우)
+ * @param {Array} data
  * @returns
  */
 const logToConsole = (data) => {
@@ -67,6 +71,9 @@ const logToConsole = (data) => {
 
 /**
  * 결과를 지정한 경로의 파일로 저장
+ * @param {Array} data
+ * @param {string} foldername
+ * @param {string} filename
  * @returns
  */
 const writeToFile = (data, foldername, filename) => {
@@ -85,6 +92,9 @@ const writeToFile = (data, foldername, filename) => {
   });
 };
 
+/**
+ * 앱 시작
+ */
 const init = async () => {
   const browser = await getBrowser();
   const page = await getPage(browser);
