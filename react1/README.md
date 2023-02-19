@@ -22,6 +22,12 @@ $ npx create-react-app my-app
 $ cd my-app
 ```
 
+### node_modules 폴더가 없고 package.json 파일이 있을 때
+
+```cmd
+$ npm i
+```
+
 ### 애플리케이션 실행
 
 ```cmd
