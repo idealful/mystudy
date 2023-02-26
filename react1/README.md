@@ -33,3 +33,16 @@ $ npm i
 ```cmd
 $ npm start
 ```
+
+### 빌드 후 실행
+
+최초 1회
+
+```cmd
+$npm i -g serve
+```
+
+```cmd
+$npm run build
+$serve -s build
+```
