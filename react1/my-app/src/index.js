@@ -7,12 +7,15 @@ import reportWebVitals from './reportWebVitals';
 // import Clock from './chapter_04/Clock';
 // import CommentList from './chapter_05/CommentList';
 // import NotificationList from './chapter_06/NotificationList';
-import Accommodate from './chapter_07/Accommodate';
+// import Accommodate from './chapter_07/Accommodate';
+// import ConfirmButton from './chapter_08/ConfirmButton';
+// import ConfirmButton2 from './chapter_08/ConfirmButton2';
+import ConfirmButton3 from './chapter_08/ConfirmButton3';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Accommodate />
+    <ConfirmButton3 />
   </React.StrictMode>
 );
 
