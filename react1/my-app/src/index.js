@@ -10,12 +10,13 @@ import reportWebVitals from './reportWebVitals';
 // import Accommodate from './chapter_07/Accommodate';
 // import ConfirmButton from './chapter_08/ConfirmButton';
 // import ConfirmButton2 from './chapter_08/ConfirmButton2';
-import ConfirmButton3 from './chapter_08/ConfirmButton3';
+// import ConfirmButton3 from './chapter_08/ConfirmButton3';
+import LandingPage from './chapter_09/LandingPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ConfirmButton3 />
+    <LandingPage />
   </React.StrictMode>
 );
 
